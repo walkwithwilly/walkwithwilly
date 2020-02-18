@@ -124,7 +124,7 @@ function checkForWin() {
 			broken.style.visibility = "hidden";
     }
 }
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+var isMobile = /iPhone|iPad|moto|Android/i.test(navigator.userAgent);
 		if (isMobile) {
-  			window.alert("Excuse me, I'm afraid you're using a mobile device that is not compatible with Walk with Willly. Please switch to desktop to play. Thanks!");
+  			window.alert("Excuse me, I'm afraid you're using a mobile device that is not compatible with Walk with Willly. Please switch to a desktop to play. Thanks!");
 		} 
