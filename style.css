@@ -6,7 +6,7 @@
 }
 
 .player { background-color: #555; font-family: 'SidTheKidNF'; color: white; float: left; border: none; outline: none; cursor: cell; padding: 14px 16px; font-size: 17px; width: 100%; } .player:hover { background-color: #777; }
-.hiddenplayer { background-color: #228b22; font-family: 'SidTheKidNF'; color: #228b22; float: left; border: none; outline: none; cursor: none; padding: 14px 16px; font-size: 17px; width: 100%; } .hiddenplayer:hover { background-color: #777; font-family: 'SidTheKidNF'; color: white; }
+.hiddenplayer { background-color: #FFFFFF; font-family: 'SidTheKidNF'; color: #228b22; float: left; border: none; outline: none; cursor: none; padding: 14px 16px; font-size: 17px; width: 100%; } .hiddenplayer:hover { background-color: #777; font-family: 'SidTheKidNF'; color: white; }
 .ground { background-color: #228b22; position: fixed; left: 0; bottom: 0; height: 520px; width:100%; z-index: -1;}
 .sky { background-color: #87ceeb; position: fixed; left: 0; bottom: 520px; height: 200px; width:100%; z-index: -1;}
 #div1{
