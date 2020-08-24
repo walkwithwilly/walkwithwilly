@@ -5,7 +5,7 @@
 <link rel='icon' href='favicon.ico' type='image/x-icon' />
 <link rel="stylesheet" type="text/css" href="style.css">
 </head> 
-
+<body>
 <script src="Movement.js"></script>
 <div id = "div2" style = "float:left;">
   <p align ="right" "font-size: 20px" id = "you">
@@ -24,7 +24,20 @@
          <button id="crouch" class="player" type="button" onclick="player();">Duck</button>
 		 <button id="broken" class="hiddenplayer" type="button" onclick="slide();">Move</button>
 		 <button id="restart" class="player" type="button" onclick="init();">Restart</button>
-</div>		 
+</div>	
+<audio controls loop style="visibility:hidden" id="playMusic">
+<source src="gameMusic.MP3" type="audio/MP3">
+</audio>	
+<audio controls loop style="visibility:hidden" id="menuMusic">
+<source src="menutrack.MP3" type="audio/MP3">
+</audio>
+<audio controls style="visibility:hidden" id="explode">
+<source src="explosion.MP3" type="audio/MP3">
+</audio>
+<audio controls style="visibility:hidden" id="yay">
+<source src="win.MP3" type="audio/MP3">
+</audio>
+</body> 
 <br>
 
 <div align ="right" id ="debug" ></div>
