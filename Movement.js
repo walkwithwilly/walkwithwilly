@@ -9,6 +9,7 @@ function sleep(ms) {
 			var rocket = null;
 			var ducked = false;
 			var started = true;
+			var playMusic = document.getElementById("playMusic")
             function init() {
                imgObj = document.getElementById('dot');
                imgObj.style.position= 'relative'; 
@@ -44,6 +45,10 @@ function sleep(ms) {
 			}
             window.onload = init
 		async function obstacle() { 
+		menuMusic = document.getElementById("menuMusic");
+		menuMusic.pause();
+		playMusic = document.getElementById("playMusic");
+		playMusic.play();
 		     document.getElementById("crouch");
 			   document.getElementById("broken");
 			   crouch.style.visibility = "initial";
@@ -101,6 +106,12 @@ async function slide() {
 function checkForWin() {
 	if (sprite.x > window.innerWidth) {
 		started = false;
+		win = document.getElementById("yay");
+		win.play();
+		playMusic = document.getElementById("playMusic");
+		playMusic.pause();
+		menuMusic = document.getElementById("menuMusic");
+		menuMusic.play();
 		window.alert("Wonderful! We just went for a walk with Willy, and won! Wow!");
 		init();
 	}
@@ -110,6 +121,12 @@ function checkForWin() {
 	  !ducked &&
 	  sprite.x < rocket.x) {
 		    started = false;
+			dead = document.getElementById("explode");
+		    dead.play();
+			playMusic = document.getElementById("playMusic");
+		playMusic.pause();
+		menuMusic = document.getElementById("menuMusic");
+		menuMusic.play();
 		    sprite = document.getElementById("sprite");
 			sprite.src='Sprite4.png'
 			rocket = document.getElementById("rocket");
@@ -128,3 +145,6 @@ var isMobile = /iPhone|iPad|moto|Android|Samsung|pixel/i.test(navigator.userAgen
 		if (isMobile) {
   			window.alert("Excuse me, I'm afraid you're using a mobile device that is not yet compatible with Walk with Willly. Please switch to a desktop to play. Thanks!");
 		} 
+		if (!isMobile) {
+			window.alert("Welcome to Walk With Willy! While you're with us, you may wonder why there is no walk button. To that I say, everything may not be as it seems...");
+		}
