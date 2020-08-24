@@ -24,6 +24,6 @@
   position:relative;
    bottom:10px;
 }
-#body {
+html {
   cursor: cell;
 }
